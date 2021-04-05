@@ -1,3 +1,8 @@
+# Meshtastic-NodeMap
+#Zebus Jesus
+# MIT
+# 4-5-21
+
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np
@@ -6,7 +11,7 @@ import csv
 #get long and lat
 def mapNODE():
     # open the file in read mode
-    filename = open('rangetest1.csv', 'r')
+    filename = open('rangetest.csv', 'r')
 
     # creating dictreader object
     file = csv.DictReader(filename)
@@ -28,8 +33,8 @@ def mapNODE():
     listcount = len(latitude)
 
     # printing lists
-    print('latitude:', latitude)
-    print('longitude:', longitude)
+    ##print('latitude:', latitude)
+    #print('longitude:', longitude)
     #print('sender:', sender)
 
 
@@ -40,8 +45,6 @@ def mapNODE():
     lat_viewing_angle = latitude[1]
     lon_viewing_angle = longitude[1]
 
-    lat_viewing_angle2 = latitude[2]
-    lon_viewing_angle2 = longitude[2]
 
     # define color maps for water and land
     ocean_map = (plt.get_cmap('ocean'))(210)
